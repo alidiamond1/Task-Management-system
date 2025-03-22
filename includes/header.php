@@ -55,6 +55,40 @@ $current_page = basename($_SERVER['PHP_SELF']);
             color: #dc3545;
             font-weight: bold;
         }
+        .bg-gradient-primary {
+            background: linear-gradient(45deg, #4e73df 0%, #224abe 100%);
+        }
+        .form-floating > label {
+            padding-left: 2.5rem;
+        }
+        .form-floating > .form-control {
+            padding-left: 2.5rem;
+        }
+        .card {
+            transition: all 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .btn-primary {
+            transition: all 0.3s ease-in-out;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(78, 115, 223, 0.3);
+        }
+        .min-vh-100 {
+            min-height: 100vh;
+        }
+        .alert {
+            border-left: 4px solid;
+        }
+        .alert-danger {
+            border-left-color: #dc3545;
+        }
+        .alert-success {
+            border-left-color: #28a745;
+        }
     </style>
 </head>
 <body>

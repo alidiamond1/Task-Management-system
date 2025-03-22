@@ -1,8 +1,9 @@
 <?php
+
 // Database configuration
 $host = 'localhost';
 $dbname = 'task_management';
-$username = 'root';
+$username = 'root'; // Change this to your MySQL username
 $password = '';
 
 // Create connection
@@ -15,4 +16,5 @@ try {
 } catch(PDOException $e) {
     die("Connection failed: " . $e->getMessage());
 }
+
 ?>

@@ -52,6 +52,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (strlen($title) > 100) {
         $errors['title'] = 'Title must be less than 100 characters';
     }
+
+    // Validate description
+    if (strlen($description) > 500) {
+        $errors['description'] = 'Description must be less than 500 characters';
+    }
     
     // Validate status
     if (!in_array($status, ['pending', 'in_progress', 'completed'])) {
@@ -111,6 +116,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="mb-3">
                         <label for="description" class="form-label">Description</label>
                         <textarea class="form-control" id="description" name="description" rows="4"><?php echo htmlspecialchars($description); ?></textarea>
+                        <?php if (isset($errors['description'])): ?>
+                            <div class="invalid-feedback"><?php echo $errors['description']; ?></div>
+                        <?php endif; ?>
                     </div>
                     
                     <div class="mb-3">
